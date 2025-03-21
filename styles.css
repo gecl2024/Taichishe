@@ -102,6 +102,39 @@ footer {
     border-top: 1px solid #e0e0e0;
 }
 
+footer .small {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    color: #95a5a6;
+}
+
+/* 附加样式 */
+.note {
+    background-color: #fcf8e3;
+    border-left: 4px solid #f0ad4e;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    color: #8a6d3b;
+}
+
+.info-block a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.info-block a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
     body {

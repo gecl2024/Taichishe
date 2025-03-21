@@ -1,62 +1,79 @@
 <!DOCTYPE html>
+<!-- 焦虑冒险网站 - 基于Nicky Case的开源游戏 -->
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>贪吃蛇游戏 - 简单有趣的休闲游戏</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>焦虑冒险 - Adventures With Anxiety!</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/gecl2024/anxiety/gh-pages/favicon.png">
 </head>
 <body>
     <header>
-        <h1>贪吃蛇游戏</h1>
-        <p class="subtitle">简单易上手的经典游戏</p>
+        <h1>焦虑冒险 - Adventures With Anxiety!</h1>
+        <p class="subtitle">一个关于焦虑的互动故事游戏 - 在这里，你将扮演"焦虑"本身</p>
     </header>
 
     <main>
         <section class="game-container">
-            <iframe src="game.html" frameborder="0" width="800" height="600"></iframe>
+            <iframe src="https://gecl2024.github.io/anxiety/" frameborder="0" width="800" height="600" title="焦虑冒险游戏" loading="lazy" allowfullscreen></iframe>
         </section>
 
         <section class="game-info">
             <div class="info-block">
                 <h2>游戏介绍</h2>
-                <p>贪吃蛇是一款经典的休闲游戏，玩家通过控制蛇的移动方向，吃掉出现的食物来让蛇变得更长。游戏考验玩家的反应能力和策略思维，简单易上手但富有挑战性。</p>
+                <p>《焦虑冒险》是一款互动故事游戏，由Nicky Case创作。在这个游戏中，您将扮演"焦虑"本身，体验焦虑症患者的内心世界。游戏通过幽默的方式展示焦虑症的工作原理，帮助玩家减轻对恐惧本身的恐惧。</p>
+                <p>游戏中你将控制一只活泼的焦虑小狼，它的使命是保护人类主角免受各种"危险"。通过互动故事，你将体验焦虑思维的运作方式，以及它如何影响日常生活。</p>
             </div>
 
             <div class="info-block">
                 <h2>操作说明</h2>
                 <ul>
-                    <li>↑ 向上移动</li>
-                    <li>↓ 向下移动</li>
-                    <li>← 向左移动</li>
-                    <li>→ 向右移动</li>
-                    <li>空格键 - 暂停/继续游戏</li>
+                    <li>点击或空格键 - 继续对话/互动</li>
+                    <li>点击选项 - 做出选择</li>
+                    <li>点击任意位置 - 暂停/继续游戏</li>
+                </ul>
+                <p class="note">注意：游戏内含成人语言、酒精使用提及和一些敏感话题</p>
+            </div>
+
+            <div class="info-block">
+                <h2>游戏特点</h2>
+                <ul>
+                    <li>温馨诙谐的叙事方式探讨焦虑症</li>
+                    <li>独特的视角：扮演焦虑本身而非患者</li>
+                    <li>简洁有趣的手绘风格和超活跃的狼形象</li>
+                    <li>提供关于心理健康的有用信息和建议</li>
+                    <li>多个分支选择，影响故事发展</li>
+                    <li>原创音乐由Monplaisir创作</li>
                 </ul>
             </div>
 
             <div class="info-block">
-                <h2>游戏技巧</h2>
+                <h2>创作者介绍</h2>
+                <p>Nicky Case是一位独立游戏开发者和互动故事创作者，专注于通过游戏形式探讨复杂的心理和社会议题。《焦虑冒险》是基于创作者自身焦虑障碍经历创作的作品。</p>
+                <p>游戏完全开源，所有内容均以知识共享零（CC0）协议发布，允许任何人自由使用、修改和分享。</p>
+            </div>
+
+            <div class="info-block">
+                <h2>游戏角色</h2>
                 <ul>
-                    <li>保持冷静，提前规划路线</li>
-                    <li>避免将自己困在角落</li>
-                    <li>合理利用空间，不要过早切断自己的退路</li>
-                    <li>在高速移动时要特别注意预判方向</li>
+                    <li><strong>焦虑小狼（玩家角色）</strong> - 一只超级活跃、过度保护的小狼，代表主角的焦虑</li>
+                    <li><strong>人类主角</strong> - 一个面临社交、职业和个人挑战的普通人</li>
                 </ul>
             </div>
 
             <div class="info-block">
-                <h2>类似游戏推荐</h2>
-                <ul>
-                    <li>俄罗斯方块 - 经典的方块消除游戏</li>
-                    <li>吃豆人 - 迷宫探索游戏</li>
-                    <li>弹球 - 考验反应的休闲游戏</li>
-                </ul>
+                <h2>原始代码</h2>
+                <p>这款游戏的完整源代码可在GitHub上找到：<a href="https://github.com/gecl2024/anxiety" target="_blank">焦虑冒险源代码库</a></p>
+                <p>游戏使用了多种开源技术，包括Howler.js（音效）、MinPubSub（发布/订阅）、RSVP.js（Promise）等。</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 贪吃蛇游戏 版权所有</p>
+        <p>© 2024 焦虑冒险 | 原创游戏由Nicky Case制作 | 音乐：Monplaisir</p>
+        <p class="small">本游戏以知识共享零（CC0）协议发布，允许任何人自由使用、修改和分享内容</p>
     </footer>
 </body>
 </html> 
