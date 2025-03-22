@@ -34,6 +34,37 @@ header .subtitle {
     color: #7f8c8d;
 }
 
+/* 语言选择器 */
+.language-selector {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.language-selector label {
+    margin-right: 10px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.language-selector select {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.language-selector select:hover {
+    border-color: #bbb;
+}
+
+.language-selector select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
 /* 主要内容区域 */
 main {
     display: flex;

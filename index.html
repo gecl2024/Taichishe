@@ -1,79 +1,259 @@
 <!DOCTYPE html>
-<!-- 焦虑冒险网站 - 基于Nicky Case的开源游戏 -->
-<html lang="zh">
+<!-- Adventures With Anxiety Website - Based on Nicky Case's open source game -->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>焦虑冒险 - Adventures With Anxiety!</title>
+    <title>Adventures With Anxiety!</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://raw.githubusercontent.com/gecl2024/anxiety/gh-pages/favicon.png">
 </head>
 <body>
     <header>
-        <h1>焦虑冒险 - Adventures With Anxiety!</h1>
-        <p class="subtitle">一个关于焦虑的互动故事游戏 - 在这里，你将扮演"焦虑"本身</p>
+        <h1>Adventures With Anxiety!</h1>
+        <p class="subtitle">An interactive story about anxiety - where you play as the anxiety itself</p>
+        <div class="language-selector">
+            <label for="language-select">Language:</label>
+            <select id="language-select" onchange="changeLanguage(this.value)">
+                <option value="en" selected>English</option>
+                <option value="zh">中文</option>
+                <option value="fr">Français</option>
+                <option value="ru">Русский</option>
+                <option value="pt-br">Português do Brasil</option>
+                <option value="pt-pt">Português de Portugal</option>
+                <option value="de">Deutsch</option>
+                <option value="es-eu">Español (Europeo)</option>
+                <option value="es-la">Español (Latino)</option>
+                <option value="pl">Polski</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="tr">Türkçe</option>
+                <option value="th">ภาษาไทย</option>
+                <option value="zh-tw">中文（臺灣）</option>
+                <option value="uk">Українська мова</option>
+                <option value="ko">한국어</option>
+            </select>
+        </div>
     </header>
 
     <main>
         <section class="game-container">
-            <iframe src="https://gecl2024.github.io/anxiety/" frameborder="0" width="800" height="600" title="焦虑冒险游戏" loading="lazy" allowfullscreen></iframe>
+            <iframe id="game-frame" src="https://gecl2024.github.io/anxiety/" frameborder="0" width="800" height="600" title="Adventures With Anxiety Game" loading="lazy" allowfullscreen></iframe>
         </section>
 
         <section class="game-info">
             <div class="info-block">
-                <h2>游戏介绍</h2>
-                <p>《焦虑冒险》是一款互动故事游戏，由Nicky Case创作。在这个游戏中，您将扮演"焦虑"本身，体验焦虑症患者的内心世界。游戏通过幽默的方式展示焦虑症的工作原理，帮助玩家减轻对恐惧本身的恐惧。</p>
-                <p>游戏中你将控制一只活泼的焦虑小狼，它的使命是保护人类主角免受各种"危险"。通过互动故事，你将体验焦虑思维的运作方式，以及它如何影响日常生活。</p>
+                <h2>About the Game</h2>
+                <p>Adventures With Anxiety is an interactive story game created by Nicky Case. In this game, you play as "anxiety" itself, experiencing the inner world of someone with anxiety disorder. The game uses humor to show how anxiety works, and might help players reduce their fear of fear itself.</p>
+                <p>You'll control a hyperactive anxiety wolf whose mission is to protect the human character from various "dangers". Through this interactive story, you'll experience how anxious thinking works and how it affects daily life.</p>
             </div>
 
             <div class="info-block">
-                <h2>操作说明</h2>
+                <h2>How to Play</h2>
                 <ul>
-                    <li>点击或空格键 - 继续对话/互动</li>
-                    <li>点击选项 - 做出选择</li>
-                    <li>点击任意位置 - 暂停/继续游戏</li>
+                    <li>Click or press spacebar - Advance dialogue/interaction</li>
+                    <li>Click on options - Make choices</li>
+                    <li>Click anywhere - Pause/resume game</li>
                 </ul>
-                <p class="note">注意：游戏内含成人语言、酒精使用提及和一些敏感话题</p>
+                <p class="note">Note: Game contains adult language, mentions of alcohol use, and some sensitive topics</p>
             </div>
 
             <div class="info-block">
-                <h2>游戏特点</h2>
+                <h2>Features</h2>
                 <ul>
-                    <li>温馨诙谐的叙事方式探讨焦虑症</li>
-                    <li>独特的视角：扮演焦虑本身而非患者</li>
-                    <li>简洁有趣的手绘风格和超活跃的狼形象</li>
-                    <li>提供关于心理健康的有用信息和建议</li>
-                    <li>多个分支选择，影响故事发展</li>
-                    <li>原创音乐由Monplaisir创作</li>
-                </ul>
-            </div>
-
-            <div class="info-block">
-                <h2>创作者介绍</h2>
-                <p>Nicky Case是一位独立游戏开发者和互动故事创作者，专注于通过游戏形式探讨复杂的心理和社会议题。《焦虑冒险》是基于创作者自身焦虑障碍经历创作的作品。</p>
-                <p>游戏完全开源，所有内容均以知识共享零（CC0）协议发布，允许任何人自由使用、修改和分享。</p>
-            </div>
-
-            <div class="info-block">
-                <h2>游戏角色</h2>
-                <ul>
-                    <li><strong>焦虑小狼（玩家角色）</strong> - 一只超级活跃、过度保护的小狼，代表主角的焦虑</li>
-                    <li><strong>人类主角</strong> - 一个面临社交、职业和个人挑战的普通人</li>
+                    <li>A warm and humorous narrative exploring anxiety</li>
+                    <li>Unique perspective: play as anxiety itself rather than the person</li>
+                    <li>Simple and fun hand-drawn style with a hyperactive wolf character</li>
+                    <li>Provides useful information and advice about mental health</li>
+                    <li>Multiple branching choices affecting story development</li>
+                    <li>Original music by Monplaisir</li>
                 </ul>
             </div>
 
             <div class="info-block">
-                <h2>原始代码</h2>
-                <p>这款游戏的完整源代码可在GitHub上找到：<a href="https://github.com/gecl2024/anxiety" target="_blank">焦虑冒险源代码库</a></p>
-                <p>游戏使用了多种开源技术，包括Howler.js（音效）、MinPubSub（发布/订阅）、RSVP.js（Promise）等。</p>
+                <h2>About the Creator</h2>
+                <p>Nicky Case is an independent game developer and interactive storyteller who focuses on exploring complex psychological and social issues through games. Adventures With Anxiety is created based on the creator's own experience with anxiety disorder.</p>
+                <p>The game is completely open-source, with all content released under the Creative Commons Zero (CC0) license, allowing anyone to freely use, modify, and share the content.</p>
+            </div>
+
+            <div class="info-block">
+                <h2>Game Characters</h2>
+                <ul>
+                    <li><strong>Anxiety Wolf (Player Character)</strong> - A hyperactive, overprotective wolf representing the protagonist's anxiety</li>
+                    <li><strong>Human Protagonist</strong> - An ordinary person facing social, professional, and personal challenges</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h2>Source Code</h2>
+                <p>The complete source code for this game can be found on GitHub: <a href="https://github.com/gecl2024/anxiety" target="_blank">Adventures With Anxiety Source Repository</a></p>
+                <p>The game uses various open-source technologies, including Howler.js (sound effects), MinPubSub (publish/subscribe), RSVP.js (Promises), and more.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 焦虑冒险 | 原创游戏由Nicky Case制作 | 音乐：Monplaisir</p>
-        <p class="small">本游戏以知识共享零（CC0）协议发布，允许任何人自由使用、修改和分享内容</p>
+        <p>© 2024 Adventures With Anxiety | Original game by Nicky Case | Music: Monplaisir</p>
+        <p class="small">This game is released under the Creative Commons Zero (CC0) license, allowing anyone to freely use, modify, and share the content</p>
     </footer>
+
+    <script>
+        // Language handling functions
+        function changeLanguage(lang) {
+            // Update iframe src based on language selection
+            const gameFrame = document.getElementById('game-frame');
+            
+            // Base URL for the game
+            const baseUrl = 'https://gecl2024.github.io/anxiety/';
+            
+            // For the original game, keep the base URL
+            if (lang === 'en') {
+                gameFrame.src = baseUrl;
+                document.documentElement.lang = 'en';
+                updateUIText('en');
+                return;
+            }
+            
+            // For other languages, we need to check if they're available
+            // This would depend on how the original game handles translations
+            // For now we'll just show an alert for languages other than English and Chinese
+            if (lang === 'zh') {
+                gameFrame.src = baseUrl;
+                document.documentElement.lang = 'zh';
+                updateUIText('zh');
+            } else {
+                alert('This language is only available in the game itself. Please select the language within the game interface.');
+                document.getElementById('language-select').value = 'en';
+            }
+        }
+        
+        // Update the UI text based on selected language
+        function updateUIText(lang) {
+            const texts = {
+                'en': {
+                    'title': 'Adventures With Anxiety!',
+                    'subtitle': 'An interactive story about anxiety - where you play as the anxiety itself',
+                    'about-heading': 'About the Game',
+                    'about-p1': 'Adventures With Anxiety is an interactive story game created by Nicky Case. In this game, you play as "anxiety" itself, experiencing the inner world of someone with anxiety disorder. The game uses humor to show how anxiety works, and might help players reduce their fear of fear itself.',
+                    'about-p2': 'You\'ll control a hyperactive anxiety wolf whose mission is to protect the human character from various "dangers". Through this interactive story, you\'ll experience how anxious thinking works and how it affects daily life.',
+                    'how-heading': 'How to Play',
+                    'how-li1': 'Click or press spacebar - Advance dialogue/interaction',
+                    'how-li2': 'Click on options - Make choices',
+                    'how-li3': 'Click anywhere - Pause/resume game',
+                    'note': 'Note: Game contains adult language, mentions of alcohol use, and some sensitive topics',
+                    'features-heading': 'Features',
+                    'features-li1': 'A warm and humorous narrative exploring anxiety',
+                    'features-li2': 'Unique perspective: play as anxiety itself rather than the person',
+                    'features-li3': 'Simple and fun hand-drawn style with a hyperactive wolf character',
+                    'features-li4': 'Provides useful information and advice about mental health',
+                    'features-li5': 'Multiple branching choices affecting story development',
+                    'features-li6': 'Original music by Monplaisir',
+                    'creator-heading': 'About the Creator',
+                    'creator-p1': 'Nicky Case is an independent game developer and interactive storyteller who focuses on exploring complex psychological and social issues through games. Adventures With Anxiety is created based on the creator\'s own experience with anxiety disorder.',
+                    'creator-p2': 'The game is completely open-source, with all content released under the Creative Commons Zero (CC0) license, allowing anyone to freely use, modify, and share the content.',
+                    'characters-heading': 'Game Characters',
+                    'characters-li1-1': 'Anxiety Wolf (Player Character)',
+                    'characters-li1-2': 'A hyperactive, overprotective wolf representing the protagonist\'s anxiety',
+                    'characters-li2-1': 'Human Protagonist',
+                    'characters-li2-2': 'An ordinary person facing social, professional, and personal challenges',
+                    'source-heading': 'Source Code',
+                    'source-p1-1': 'The complete source code for this game can be found on GitHub:',
+                    'source-p1-2': 'Adventures With Anxiety Source Repository',
+                    'source-p2': 'The game uses various open-source technologies, including Howler.js (sound effects), MinPubSub (publish/subscribe), RSVP.js (Promises), and more.',
+                    'footer-p1': '© 2024 Adventures With Anxiety | Original game by Nicky Case | Music: Monplaisir',
+                    'footer-p2': 'This game is released under the Creative Commons Zero (CC0) license, allowing anyone to freely use, modify, and share the content'
+                },
+                'zh': {
+                    'title': '焦虑冒险 - Adventures With Anxiety!',
+                    'subtitle': '一个关于焦虑的互动故事游戏 - 在这里，你将扮演"焦虑"本身',
+                    'about-heading': '游戏介绍',
+                    'about-p1': '《焦虑冒险》是一款互动故事游戏，由Nicky Case创作。在这个游戏中，您将扮演"焦虑"本身，体验焦虑症患者的内心世界。游戏通过幽默的方式展示焦虑症的工作原理，帮助玩家减轻对恐惧本身的恐惧。',
+                    'about-p2': '游戏中你将控制一只活泼的焦虑小狼，它的使命是保护人类主角免受各种"危险"。通过互动故事，你将体验焦虑思维的运作方式，以及它如何影响日常生活。',
+                    'how-heading': '操作说明',
+                    'how-li1': '点击或空格键 - 继续对话/互动',
+                    'how-li2': '点击选项 - 做出选择',
+                    'how-li3': '点击任意位置 - 暂停/继续游戏',
+                    'note': '注意：游戏内含成人语言、酒精使用提及和一些敏感话题',
+                    'features-heading': '游戏特点',
+                    'features-li1': '温馨诙谐的叙事方式探讨焦虑症',
+                    'features-li2': '独特的视角：扮演焦虑本身而非患者',
+                    'features-li3': '简洁有趣的手绘风格和超活跃的狼形象',
+                    'features-li4': '提供关于心理健康的有用信息和建议',
+                    'features-li5': '多个分支选择，影响故事发展',
+                    'features-li6': '原创音乐由Monplaisir创作',
+                    'creator-heading': '创作者介绍',
+                    'creator-p1': 'Nicky Case是一位独立游戏开发者和互动故事创作者，专注于通过游戏形式探讨复杂的心理和社会议题。《焦虑冒险》是基于创作者自身焦虑障碍经历创作的作品。',
+                    'creator-p2': '游戏完全开源，所有内容均以知识共享零（CC0）协议发布，允许任何人自由使用、修改和分享。',
+                    'characters-heading': '游戏角色',
+                    'characters-li1-1': '焦虑小狼（玩家角色）',
+                    'characters-li1-2': '一只超级活跃、过度保护的小狼，代表主角的焦虑',
+                    'characters-li2-1': '人类主角',
+                    'characters-li2-2': '一个面临社交、职业和个人挑战的普通人',
+                    'source-heading': '原始代码',
+                    'source-p1-1': '这款游戏的完整源代码可在GitHub上找到：',
+                    'source-p1-2': '焦虑冒险源代码库',
+                    'source-p2': '游戏使用了多种开源技术，包括Howler.js（音效）、MinPubSub（发布/订阅）、RSVP.js（Promise）等。',
+                    'footer-p1': '© 2024 焦虑冒险 | 原创游戏由Nicky Case制作 | 音乐：Monplaisir',
+                    'footer-p2': '本游戏以知识共享零（CC0）协议发布，允许任何人自由使用、修改和分享内容'
+                }
+            };
+            
+            // Update document title
+            document.title = texts[lang]['title'];
+            
+            // Update header content
+            document.querySelector('header h1').textContent = texts[lang]['title'];
+            document.querySelector('header .subtitle').textContent = texts[lang]['subtitle'];
+            
+            // Update info blocks
+            const infoBlocks = document.querySelectorAll('.info-block');
+            
+            // About the Game
+            infoBlocks[0].querySelector('h2').textContent = texts[lang]['about-heading'];
+            infoBlocks[0].querySelectorAll('p')[0].textContent = texts[lang]['about-p1'];
+            infoBlocks[0].querySelectorAll('p')[1].textContent = texts[lang]['about-p2'];
+            
+            // How to Play
+            infoBlocks[1].querySelector('h2').textContent = texts[lang]['how-heading'];
+            const howLis = infoBlocks[1].querySelectorAll('li');
+            howLis[0].textContent = texts[lang]['how-li1'];
+            howLis[1].textContent = texts[lang]['how-li2'];
+            howLis[2].textContent = texts[lang]['how-li3'];
+            infoBlocks[1].querySelector('.note').textContent = texts[lang]['note'];
+            
+            // Features
+            infoBlocks[2].querySelector('h2').textContent = texts[lang]['features-heading'];
+            const featuresLis = infoBlocks[2].querySelectorAll('li');
+            featuresLis[0].textContent = texts[lang]['features-li1'];
+            featuresLis[1].textContent = texts[lang]['features-li2'];
+            featuresLis[2].textContent = texts[lang]['features-li3'];
+            featuresLis[3].textContent = texts[lang]['features-li4'];
+            featuresLis[4].textContent = texts[lang]['features-li5'];
+            featuresLis[5].textContent = texts[lang]['features-li6'];
+            
+            // About the Creator
+            infoBlocks[3].querySelector('h2').textContent = texts[lang]['creator-heading'];
+            infoBlocks[3].querySelectorAll('p')[0].textContent = texts[lang]['creator-p1'];
+            infoBlocks[3].querySelectorAll('p')[1].textContent = texts[lang]['creator-p2'];
+            
+            // Game Characters
+            infoBlocks[4].querySelector('h2').textContent = texts[lang]['characters-heading'];
+            const characterLis = infoBlocks[4].querySelectorAll('li');
+            characterLis[0].innerHTML = `<strong>${texts[lang]['characters-li1-1']}</strong> - ${texts[lang]['characters-li1-2']}`;
+            characterLis[1].innerHTML = `<strong>${texts[lang]['characters-li2-1']}</strong> - ${texts[lang]['characters-li2-2']}`;
+            
+            // Source Code
+            infoBlocks[5].querySelector('h2').textContent = texts[lang]['source-heading'];
+            const sourceP1 = infoBlocks[5].querySelectorAll('p')[0];
+            const linkText = texts[lang]['source-p1-2'];
+            sourceP1.innerHTML = `${texts[lang]['source-p1-1']} <a href="https://github.com/gecl2024/anxiety" target="_blank">${linkText}</a>`;
+            infoBlocks[5].querySelectorAll('p')[1].textContent = texts[lang]['source-p2'];
+            
+            // Footer
+            const footerPs = document.querySelectorAll('footer p');
+            footerPs[0].textContent = texts[lang]['footer-p1'];
+            footerPs[1].textContent = texts[lang]['footer-p2'];
+        }
+    </script>
 </body>
 </html> 
